@@ -212,21 +212,68 @@ h2 {
 
 /* CONTACT */
 
-.contact {
+.contact,
+#contact {
     text-align: center;
+    padding: 100px 24px;
+    background: #0b0b0b;
 }
 
-.contact h2 {
-    margin-bottom: 20px;
+.contact .small-heading,
+#contact .small-heading {
+    margin-bottom: 18px;
 }
 
-.contact > p:not(.small-heading) {
+.contact h2,
+#contact h2 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+}
+
+.contact > p:not(.small-heading),
+#contact > p:not(.small-heading) {
     color: #999;
-    max-width: 600px;
-    margin: 0 auto 30px;
+    max-width: 650px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
 }
 
+.contact .button,
+#contact .button {
+    display: inline-block;
+}
 
+/* CONTACT CTA */
+
+.contact-cta {
+    text-align: center;
+    padding: 100px 24px;
+    background: #0b0b0b;
+}
+
+.contact-cta .small-heading {
+    margin-bottom: 18px;
+}
+
+.contact-cta h2 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+}
+
+.contact-cta > p:not(.small-heading) {
+    color: #999;
+    max-width: 650px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.contact-cta .primary-button {
+    display: inline-block;
+}
 /* FOOTER */
 
 footer {
@@ -493,4 +540,115 @@ white-space: nowrap;
 
 .error-message {
     color: #ff3b30;
+}
+/* SCROLL PROGRESS */
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #ff3b30,
+        #ff1f1f,
+        #ff3b30
+    );
+    box-shadow: 0 0 12px rgba(255, 59, 48, 0.8);
+    z-index: 9999;
+    transition: width 0.08s linear;
+}
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    translate: 0 24px;
+    transition:
+        opacity 0.8s ease,
+        translate 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, translate;
+}
+
+.reveal.active {
+    opacity: 1;
+    translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        translate: none;
+        transition: none;
+    }
+}
+/* SMOOTH CARD HOVER */
+
+.service-card,
+.package-card,
+.result-card,
+.testimonial-card {
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.service-card:hover,
+.package-card:hover,
+.result-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+/* MOBILE MENU */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        background: #0d0d0d;
+        border: 1px solid #252525;
+        border-radius: 10px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+        z-index: 9998;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 14px 16px;
+    }
+
+    header nav .nav-button {
+        margin-top: 6px;
+        text-align: center;
+    }
 }
