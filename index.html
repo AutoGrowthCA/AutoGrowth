@@ -11,15 +11,19 @@
 <body>
 
     <header>
-        <div class="logo">Auto<span>Growth</span></div>
+    <div class="logo">Auto<span>Growth</span></div>
 
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" class="nav-button">Get Started</a>
-        </nav>
-    </header>
+    <nav id="nav-menu">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-button">Get Started</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        ☰
+    </button>
+</header>
 
 
     <main>
@@ -93,113 +97,123 @@
 
         <p class="small-heading">SIMPLE. POWERFUL. EFFECTIVE.</p>
 
-        <h2>Choose Your <span>Growth Plan.</span></h2>
+       <h2>Choose Your <span>Growth Plan.</span></h2>
 
-        <p class="packages-intro">
-            Whether you're just getting started or ready to grow aggressively,
-            AutoGrowth has a solution built for your detailing business.
+<p class="packages-intro">
+    Whether you need a professional website or a complete customer-growth system,
+    AutoGrowth has a solution built for your detailing business.
+</p>
+
+<div class="packages">
+
+    <!-- STARTER -->
+    <div class="package-card">
+
+        <p class="package-label">STARTER</p>
+
+        <h3>Get Online</h3>
+
+        <div class="price">
+            $500<span> one-time</span>
+        </div>
+
+        <p class="package-description">
+            Build a professional online presence that makes it easy for customers
+            to discover your services and contact your business.
         </p>
 
-        <div class="packages">
+        <ul>
+            <li>✓ Professional website</li>
+            <li>✓ Mobile-friendly design</li>
+            <li>✓ Services & pricing showcase</li>
+            <li>✓ Contact / quote request form</li>
+            <li>✓ Basic booking setup</li>
+        </ul>
 
-            <!-- STARTER -->
-            <div class="package-card">
+        <a href="#contact" class="package-button" onclick="selectPackage('starter')">
+            Get Started
+        </a>
 
-                <p class="package-label">STARTER</p>
-
-                <h3>Get Online</h3>
-
-                <div class="price">
-                    $500<span> one-time</span>
-                </div>
-
-                <p class="package-description">
-                    Everything you need to establish a professional online presence.
-                </p>
-
-                <ul>
-                    <li>✓ Professional website</li>
-                    <li>✓ Mobile-friendly design</li>
-                    <li>✓ Services showcase</li>
-                    <li>✓ Contact form</li>
-                    <li>✓ Basic booking setup</li>
-                </ul>
-
-                <a href="#contact" class="package-button" onclick="selectPackage('starter')">
-    Get Started
-</a>
-
-            </div>
+    </div>
 
 
-            <!-- GROWTH -->
-            <div class="package-card featured">
+    <!-- GROWTH -->
+    <div class="package-card featured">
 
-                <div class="popular">MOST POPULAR</div>
+        <div class="popular">MOST POPULAR</div>
 
-                <p class="package-label">GROWTH</p>
+        <p class="package-label">GROWTH</p>
 
-                <h3>Get More Customers</h3>
+        <h3>Get More Customers</h3>
 
-                <div class="price">
-                    $750<span> setup</span>
-                </div>
+        <div class="price">
+            $750<span> setup</span>
+        </div>
 
-                <div class="monthly">
-                    \+ $100/month
-                </div>
+        <div class="monthly">
+            + $100/month
+        </div>
 
-                <p class="package-description">
-                    Our recommended package for detailing businesses ready to grow.
-                </p>
+        <p class="package-description">
+            A website and lead system backed by ongoing care, updates, and
+            conversion improvements.
+        </p>
 
-                <ul>
-                    <li>✓ Everything in Starter</li>
-                    <li>✓ Online booking system</li>
-                    <li>✓ Lead capture</li>
-                    <li>✓ Google Business optimization</li>
-                    <li>✓ Monthly website updates</li>
-                    <li>✓ Basic growth strategy</li>
-                </ul>
+        <ul>
+            <li>✓ Everything in Starter</li>
+            <li>✓ Online booking / lead system</li>
+            <li>✓ Website hosting & maintenance</li>
+            <li>✓ Reasonable monthly website updates</li>
+            <li>✓ Booking & lead-form monitoring</li>
+            <li>✓ Basic performance monitoring</li>
+            <li>✓ Ongoing conversion improvements</li>
+            <li>✓ Priority support</li>
+        </ul>
 
-                <a href="#contact" class="package-button" onclick="selectPackage('growth')">
-    Grow My Business
-</a>
+        <a href="#contact" class="package-button" onclick="selectPackage('growth')">
+            Grow My Business
+        </a>
 
-            </div>
+    </div>
 
 
-            <!-- DOMINATE -->
-            <div class="package-card">
+    <!-- DOMINATE -->
+    <div class="package-card">
 
-                <p class="package-label">DOMINATE</p>
+        <p class="package-label">DOMINATE</p>
 
-                <h3>Scale Your Business</h3>
+        <h3>Scale Your Business</h3>
 
-                <div class="price">
-                    $1,500<span> setup</span>
-                </div>
+        <div class="price">
+            $1,500<span> setup</span>
+        </div>
 
-                <div class="monthly">
-                    \+ $250/month
-                </div>
+        <div class="monthly">
+            + $250/month
+        </div>
 
-                <p class="package-description">
-                    A complete customer-growth system for businesses ready to scale.
-                </p>
+        <p class="package-description">
+            A more advanced growth and automation system for businesses ready
+            to improve follow-up, conversions, and customer retention.
+        </p>
 
-                <ul>
-                    <li>✓ Everything in Growth</li>
-                    <li>✓ Lead generation campaigns</li>
-                    <li>✓ Advanced booking system</li>
-                    <li>✓ Automated customer follow-up</li>
-                    <li>✓ Conversion optimization</li>
-                    <li>✓ Priority support</li>
-                </ul>
+        <ul>
+            <li>✓ Everything in Growth</li>
+            <li>✓ Automated lead follow-up</li>
+            <li>✓ Review generation system</li>
+            <li>✓ Lead & conversion tracking</li>
+            <li>✓ Monthly conversion optimization</li>
+            <li>✓ Promotional & campaign updates</li>
+            <li>✓ Higher-priority support</li>
+        </ul>
 
-                <a href="#contact" class="package-button" onclick="selectPackage('dominate')">
-    Scale My Business
-</a>
+        <a href="#contact" class="package-button" onclick="selectPackage('dominate')">
+            Scale My Business
+        </a>
+
+    </div>
+
+</div>
 
             </div>
 
@@ -295,20 +309,22 @@
 
 </section>
 
-            <p class="small-heading">READY TO GROW?</p>
+<section class="contact-cta section">
 
-            <h2>Let's Grow Your Business.</h2>
+    <p class="small-heading">READY TO GROW?</p>
 
-            <p>
-                Get in touch with AutoGrowth and see what we can build
-                for your business.
-            </p>
+    <h2>Let's Grow Your Business.</h2>
 
-            <a href="mailto:hello@autogrowth.com" class="primary-button">
-                Contact AutoGrowth
-            </a>
+    <p>
+        Get in touch with AutoGrowth and see what we can build
+        for your business.
+    </p>
 
-        </section>
+    <a href="mailto:autogrowthca@gmail.com" class="primary-button">
+        Contact AutoGrowth
+    </a>
+
+</section>
 
     </main>
 
@@ -316,11 +332,13 @@
     <footer>
         <p>© 2026 AutoGrowth. All rights reserved.</p>
     </footer>
+    <div id="scroll-progress"></div>
 <script>
     function selectPackage(packageName) {
         document.getElementById("package").value = packageName;
     }
 
+    // CONTACT FORM
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
 
@@ -341,24 +359,90 @@
             });
 
             if (response.ok) {
-                status.textContent = "✓ Thanks! Your request has been received. AutoGrowth will be in touch shortly.";
+                status.textContent =
+                    "✓ Thanks! Your request has been received. AutoGrowth will be in touch shortly.";
+
                 status.className = "success-message";
                 form.reset();
             } else {
-                status.textContent = "Something went wrong. Please try again.";
+                status.textContent =
+                    "Something went wrong. Please try again.";
+
                 status.className = "error-message";
             }
 
         } catch (error) {
-            status.textContent = "Something went wrong. Please try again.";
+            status.textContent =
+                "Something went wrong. Please try again.";
+
             status.className = "error-message";
         }
     });
-</script>
-<script>
-    function selectPackage(packageName) {
-        document.getElementById("package").value = packageName;
+       // MOBILE MENU
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", function() {
+    navMenu.classList.toggle("active");
+});
+
+navMenu.querySelectorAll("a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navMenu.classList.remove("active");
+    });
+});
+
+
+    // RED SCROLL PROGRESS BAR
+    const scrollProgress = document.getElementById("scroll-progress");
+
+    function updateScrollProgress() {
+        const scrollTop =
+            window.scrollY || document.documentElement.scrollTop;
+
+        const documentHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const scrollPercent =
+            documentHeight > 0
+                ? (scrollTop / documentHeight) * 100
+                : 0;
+
+        scrollProgress.style.width = scrollPercent + "%";
     }
+
+    window.addEventListener("scroll", updateScrollProgress);
+
+    updateScrollProgress();
+
+    // SCROLL REVEAL
+    const revealElements = document.querySelectorAll(
+        ".service-card, .package-card, .result-card, .testimonial-card"
+    );
+
+    revealElements.forEach(function(element) {
+        element.classList.add("reveal");
+    });
+
+    const revealObserver = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    revealElements.forEach(function(element) {
+        revealObserver.observe(element);
+    });
 </script>
 </body>
+<div id="scroll-progress"></div>
 </html>
